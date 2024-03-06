@@ -758,22 +758,27 @@ footer i{
     text-align: center;
 }
 .skill-img {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     animation: scroll 20s linear infinite;
+    border: 1px solid rgba(243, 243, 243, 0.87);
+    padding: 10px;
+    border-radius: 6px;
   }
-  
   .slide-track {
-    width: 100%;
+    width: 70%; /* Set width to 50% */
+    margin: 0 auto; /* Center the slider horizontally */
     display: flex;
     gap: 3em;
     overflow: hidden;
-  }
+}
+
   
   .slider {
     margin-top: 0px;
     background-color:#0f0a0a;
     padding: 8em 2em;
+    
   }
   
   @keyframes scroll {
