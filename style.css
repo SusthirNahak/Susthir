@@ -293,11 +293,11 @@ i:hover::after{
     top: 0;
 }
 .home img{
-    width: 30vw;
-    background: rgba(255,255,255,.1);
+    width: 25vw;
+    /* background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
-    filter: drop-shadow(0 0 8rem #ff00ee);
+    filter: drop-shadow(0 0 8rem #ff00ee); */
     animation: Scale 1s ease forwards;
     scale: 0;
     animation-delay: 2s;
@@ -437,7 +437,7 @@ section.start-animation .text-content2 .btn{
 }
 section.start-animation .column:nth-child(1){
     animation: Right 1s ease forwards;
-    animation-delay: 1.2s;
+    
 }
 
 .column:nth-child(2){
@@ -446,7 +446,7 @@ section.start-animation .column:nth-child(1){
 }
 section.start-animation .column:nth-child(2){
     animation: Left 1s ease forwards;
-    animation-delay: 1.2s;
+    
 }
 .column h2{
     font-size: 2.5rem ;
@@ -518,7 +518,7 @@ section.start-animation .column h2{
 }
 section.start-animation .skill-title{
     animation: top 1s ease forwards;
-    animation-delay: 1.2s;
+    
 }
 .skill-content{
     width: 100%;
@@ -537,7 +537,7 @@ section.start-animation .skill-title{
 }
 section.start-animation .skill-box1{
     animation:  Right 1s ease forwards;
-    animation-delay: 1.2s;
+    
 }
 .skill-box2{
     opacity: 0;
@@ -545,7 +545,7 @@ section.start-animation .skill-box1{
 }
 section.start-animation .skill-box2{
     animation:Left 1s ease forwards;
-    animation-delay: 1.4s;
+    
 }
 .single-skill{
     display: flex;
@@ -595,7 +595,7 @@ input:nth-child(1){
 }
 section.start-animation input:nth-child(1){
     animation:Right 1s ease forwards;
-    animation-delay: 1.2s;
+    
 }
 input:nth-child(2){
     opacity: 0;
@@ -603,7 +603,7 @@ input:nth-child(2){
 }
 section.start-animation input:nth-child(2){
     animation:Left 1s ease forwards;
-    animation-delay: 1.2s;
+    
 }
  input,textarea{
     width: 100%;
@@ -757,31 +757,102 @@ footer i{
 .copyright{
     text-align: center;
 }
-.skill-img {
-    width: 70px;
-    height: 70px;
-    animation: scroll 20s linear infinite;
-    border: 1px solid rgba(243, 243, 243, 0.87);
-    padding: 10px;
-    border-radius: 6px;
-  }
-  .slide-track {
-    width: 70%; /* Set width to 50% */
-    margin: 0 auto; /* Center the slider horizontally */
-    display: flex;
-    gap: 3em;
-    overflow: hidden;
+/* portfolio section */
+
+
+.tab-button {
+    background-color:rgba(255,255,255,.1);
+    color: #fff;
+    border: 0.2rem solid rgba(255, 255, 255, .3);
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 26px;
 }
 
-  
-  .slider {
-    margin-top: 0px;
-    background-color:#0f0a0a;
-    padding: 8em 2em;
+.portfolio {
+    padding: 20px;
+    max-width: 100%; /* Adjust the maximum width as needed */
     
-  }
-  
-  @keyframes scroll {
-    0% {transform: translateX(0);}
-    100% {transform: translatex(-1000%)}
-  }
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    gap: 10px;
+    justify-content: center; /* Center the tabs horizontally */
+}
+
+.tab-button.active {
+    background-color: #ff00ee;
+    color: #fff;
+    
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the image boxes horizontally */
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    width: calc(50% - 20px); /* 2 columns on larger screens */
+    max-width: 600px; /* Limit the maximum width of image boxes */
+    height: 300px;
+    background: rgba(255,255,255,.1);
+    border-radius: 1rem;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ff00ee;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.overlay a:hover {
+    background-color: #fff;
+    color: #ff00ee;
+}
+
+.image-box:hover .overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .image-box {
+        width: calc(50% - 20px); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-box {
+        width: calc(100% - 20px); /* 1 column on extra small screens */
+    }
+}

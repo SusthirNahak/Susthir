@@ -26,3 +26,28 @@ window.onscroll = ()=>{
     menubar.classList.remove('bx-x');
     Navbar.classList.remove('active')
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const imageBoxes = document.querySelectorAll(".image-box");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const filter = this.getAttribute("data-filter");
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+            filterImages(filter);
+        });
+    });
+
+    function filterImages(filter) {
+        imageBoxes.forEach(box => {
+            if (filter === "all" || box.classList.contains(filter)) {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        });
+    }
+});
+
