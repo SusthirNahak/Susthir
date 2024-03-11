@@ -734,9 +734,10 @@ footer i{
     }
     .home .text-content h1{
         font-size: 4rem;
+
     }
     .home img{
-        width: 40vw;
+        display: none;
     }
     .about{
         flex-direction: column;
@@ -752,6 +753,12 @@ footer i{
     }
     .input-box input{
         width: 100%;
+    }
+    .text-animation h2{
+        text-align: center;
+    }
+    .home img{
+        display: none;
     }
 }
 .copyright{
@@ -855,4 +862,9 @@ footer i{
     .image-box {
         width: calc(100% - 20px); /* 1 column on extra small screens */
     }
+    .tabs {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    
 }
