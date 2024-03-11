@@ -754,6 +754,12 @@ footer i{
     .text-animation h2{
         text-align: center;
     }
+    .home img {
+        width: 50vw;
+        animation: Scale 1s ease forwards;
+        scale: 0;
+        animation-delay: 2s;
+    }
 }
 .copyright{
     text-align: center;
