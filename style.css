@@ -759,6 +759,8 @@ footer i{
         animation: Scale 1s ease forwards;
         scale: 0;
         animation-delay: 2s;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
 .copyright{
