@@ -766,6 +766,14 @@ footer i{
 .copyright{
     text-align: center;
 }
+
+
+.logosection{display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 34px;
+    border-radius: 8px;
+}
 /* portfolio section */
 
 
