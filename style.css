@@ -736,9 +736,6 @@ footer i{
         font-size: 4rem;
 
     }
-    .home img{
-        display: none;
-    }
     .about{
         flex-direction: column;
     }
@@ -756,9 +753,6 @@ footer i{
     }
     .text-animation h2{
         text-align: center;
-    }
-    .home img{
-        display: none;
     }
 }
 .copyright{
