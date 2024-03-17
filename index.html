@@ -9,6 +9,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
   </head>
 
   <body>
@@ -49,8 +53,16 @@
           <i class="bx bxl-whatsapp" style="--vlr: 7"></i>
         </div>
       </div>
-      <img src="./images/5396699.png" alt="" />
+      <dotlottie-player
+        src="https://lottie.host/74476745-7ed6-4d1e-8d30-09e7346ea09b/Qd8fC619Ye.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></dotlottie-player>
     </section>
+
     <!-- *************************About Section************************* -->
     <section class="about" id="about">
       <h2 class="title">About <span>Me</span></h2>
@@ -119,7 +131,7 @@
       <h2 class="title">My <span>Skills</span></h2>
       <div class="wrapper">
         <div class="skill-content">
-          <h3 class="skill-title">Languages</h3>
+          <!-- <h3 class="skill-title">Languages</h3> -->
           <div class="skill-box skill-box1">
             <div class="single-skill">
               <span class="topic">HTML 5</span>
@@ -152,7 +164,7 @@
           </div>
         </div>
         <div class="skill-content">
-          <h3 class="skill-title">Languages</h3>
+          <!-- <h3 class="skill-title">Languages</h3> -->
           <div class="skill-box skill-box2">
             <div class="single-skill">
               <span class="topic">React js</span>
@@ -227,7 +239,7 @@
             >
           </div>
         </div>
-      
+
         <div class="image-box javascript">
           <!-- Sample image box, add more as needed -->
           <img src="images/tic-tac-toe.png" alt="Clone Website" />
