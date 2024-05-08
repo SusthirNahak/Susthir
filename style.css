@@ -527,7 +527,7 @@ section.start-animation .skill-title{
 .skill-box{
     height: 100%;
     width: 100%;
-    padding: 8rem 4rem;
+    padding: 4rem 4rem;
     background: rgba(255,255,255,.1);
     border-radius: 1rem;
 }
@@ -882,5 +882,18 @@ footer i{
 
 
 
-
+/* Additional CSS for confirmation message */
+#confirmationMessage {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+ .rmvlink a{
+    text-decoration: none!important;
+ }
+  
 

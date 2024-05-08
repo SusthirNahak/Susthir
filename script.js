@@ -52,4 +52,43 @@ document.addEventListener("DOMContentLoaded", function() {
 });
   
 
+// call mebutton facility
+document.getElementById('callMeBtn').addEventListener('click', function() {
+    // Replace 'your-phone-number' with your actual phone number
+    window.open('tel:+917978112889', '_blank');
+  });
 
+
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    // Perform form validation
+    var fullName = document.getElementById('fullName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var mobileNumber = document.getElementById('mobileNumber').value.trim();
+    var subject = document.getElementById('subject').value.trim();
+    var message = document.getElementById('message').value.trim();
+    
+    if (fullName === '' || email === '' || mobileNumber === '' || subject === '' || message === '') {
+      alert('Please fill in all fields.');
+      return;
+    }
+    
+    // Simulate form submission (replace this with your actual form submission logic)
+    // Here, we'll just display a confirmation message
+    document.getElementById('confirmationMessage').style.display = 'block';
+    
+    // Clear form fields
+    document.getElementById('contactForm').reset();
+    
+    
+  });
+
+  //download cv
+
+  document.getElementById('downloadCvBtn').addEventListener('click', function() {
+    document.getElementById('cvDownloadLink').click();
+  });
+
+
+  
